@@ -10,7 +10,6 @@ The method is validated on several public datasets, including:
 
 - [**STARE**](https://cecas.clemson.edu/~ahoover/stare/): Retinal blood vessels (2D).
 - [**TopCoW**](https://topcow23.grand-challenge.org/): Circle of Willis vessels in the brain (3D).
-- [**CCA**](https://huggingface.co/datasets/MedHK23/CCA/): Coronary artery (3D).
 
 
 ## Usage
