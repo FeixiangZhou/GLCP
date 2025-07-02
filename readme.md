@@ -31,6 +31,7 @@ for 3D:
 ```bash
 nnUNetv2_train DATASET_NAME_OR_ID 3d_fullres FOLD -tr nnUNetTrainer_3DUnet_NoDeepSupervision_CE_DC_crit_ske_refine
 ```
+## Results
 ![result](./img/vis_results.png)
 
 ## Citation
