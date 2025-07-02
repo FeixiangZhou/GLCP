@@ -1,7 +1,7 @@
 # GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation
 [![MICCAI](https://img.shields.io/badge/MICCAI-Target_Conference-blue.svg)](https://miccai.org/)
 
-### 🎉 This work is provisionally accepted by [MICCAI 2025](https://conferences.miccai.org/2025/en/default.asp)!
+### 🎉 This work is early accepted by [MICCAI 2025](https://conferences.miccai.org/2025/en/default.asp)!
 ## Overview
 
 This repository contains the code for **"GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation"**! The propose GLCP can be integrated within the popular [nnUNet framework](https://github.com/MIC-DKFZ/nnUNet).
