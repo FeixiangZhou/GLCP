@@ -7,6 +7,7 @@
 This repository contains the code for **"GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation"**! The propose GLCP can be integrated within the popular [nnUNet framework](https://github.com/MIC-DKFZ/nnUNet).
 
 ![Overview](./img/framework.png)
+![result](./img/vis_results.png)
 
 ## Dataset
 The method is validated on several public datasets, including:
