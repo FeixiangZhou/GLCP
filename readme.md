@@ -1,6 +1,7 @@
 # GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation
 [![MICCAI](https://img.shields.io/badge/MICCAI-Target_Conference-blue.svg)](https://miccai.org/)
 
+### 🎉This work is short-listed for MICCAI 2025 Best Paper and Young Scientist Award (25/3677)!
 ### 🎉This work is early accepted  (top 9%) by [MICCAI 2025](https://conferences.miccai.org/2025/en/default.asp)!
 ## Overview
 
@@ -35,4 +36,13 @@ nnUNetv2_train DATASET_NAME_OR_ID 3d_fullres FOLD -tr nnUNetTrainer_3DUnet_NoDee
 ![result](./img/vis_results.png)
 
 ## Citation
-To be updated...
+@InProceedings{ZhoFei_GLCP_MICCAI2025,
+        author = { Zhou, Feixiang AND Gao, Zhuangzhi AND Zhao, He AND Xie, Jianyang AND Meng, Yanda AND Zhao, Yitian AND Lip, Gregory Y. H. AND Zheng, Yalin},
+        title = { { GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation } },
+        booktitle = {proceedings of Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025},
+        year = {2025},
+        publisher = {Springer Nature Switzerland},
+        volume = {LNCS 15975},
+        month = {September},
+        page = {237 -- 247}
+}
