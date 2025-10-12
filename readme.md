@@ -36,6 +36,8 @@ nnUNetv2_train DATASET_NAME_OR_ID 3d_fullres FOLD -tr nnUNetTrainer_3DUnet_NoDee
 ![result](./img/vis_results.png)
 
 ## Citation
+Please cite the following paper if you use this repository in your research.
+```
 @InProceedings{ZhoFei_GLCP_MICCAI2025,
         author = { Zhou, Feixiang AND Gao, Zhuangzhi AND Zhao, He AND Xie, Jianyang AND Meng, Yanda AND Zhao, Yitian AND Lip, Gregory Y. H. AND Zheng, Yalin},
         title = { { GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation } },
@@ -46,3 +48,4 @@ nnUNetv2_train DATASET_NAME_OR_ID 3d_fullres FOLD -tr nnUNetTrainer_3DUnet_NoDee
         month = {September},
         page = {237 -- 247}
 }
+```
