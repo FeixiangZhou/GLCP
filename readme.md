@@ -1,7 +1,7 @@
 # GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation
 [![MICCAI](https://img.shields.io/badge/MICCAI-Target_Conference-blue.svg)](https://miccai.org/)
 
-#### This work is short-listed for MICCAI 2025 Best Paper and Young Scientist Award (25/3677)!
+#### MICCAI 2025 Best Paper and Young Scientist Award Finalist (25/3677)!
 #### This work is early accepted  (top 9%) by [MICCAI 2025](https://conferences.miccai.org/2025/en/default.asp)!
 ## Overview
 
