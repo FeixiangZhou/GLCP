@@ -1041,7 +1041,6 @@ class nnUNetTrainer(object):
             self._best_ema = self.logger.my_fantastic_logging['ema_fg_dice'][-1]
             self.print_to_log_file(f"Yayy! New best EMA pseudo Dice: {np.round(self._best_ema, decimals=4)}")
             self.save_checkpoint(join(self.output_folder, 'checkpoint_best.pth'))
-        # self.save_metrics_to_csv_valid(self.current_epoch, self.logger.my_fantastic_logging['ema_fg_dice'][-1], self._best_ema, join(self.output_folder, 'metric_valid.csv'))
         
 
         current_epoch = self.current_epoch
@@ -1249,11 +1248,6 @@ class nnUNetTrainer(object):
                                                 self.label_manager.ignore_label, chill=True)
             self.print_to_log_file("Validation complete", also_print_to_console=True)
             self.print_to_log_file("Mean Validation Dice: ", (metrics['foreground_mean']["Dice"]), also_print_to_console=True)
-            # self.save_metrics_to_csv(self.current_epoch-1, metrics['foreground_mean']["Dice"], metrics['foreground_mean']["clDice"], 
-            # metrics['foreground_mean']["Acc"],  metrics['foreground_mean']["IoU"], metrics['foreground_mean']["NSD"], metrics['foreground_mean']['Betti_0'],
-            # metrics['foreground_mean']['Betti_1'], metrics['foreground_mean']['HD'], join(validation_output_folder, 'metric.csv'))
-
-
 
         self.set_deep_supervision_enabled(True)
         compute_gaussian.cache_clear()
@@ -1280,55 +1274,7 @@ class nnUNetTrainer(object):
                 # nnunet_trainer.perform_actual_validation(False)
 
             self.on_epoch_end()
-            #------evaluate each epoch 
-            # nnunet_trainer.load_checkpoint(join(nnunet_trainer.output_folder, 'checkpoint_%d.pth' %epoch)) 
-            # nnunet_trainer.perform_actual_validation(False)
         self.on_train_end()
 
 
-    def save_metrics_to_csv(self, epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1, hd, file_name="metrics.csv"):
-        file_exists = os.path.exists(file_name)
-
-        if epoch ==0:
-             with open(file_name, mode="w", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow(["epoch", "dice", "cldice", "acc", "iou", "nsd", "betti_0", "betti_1", "hd"])
-                writer.writerow([epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1,hd])
-        else:
-            with open(file_name, mode="a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow([epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1,hd])
-
-    def save_metrics_to_csv(self, epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1, hd, file_name="metrics.csv"):
-        file_exists = os.path.exists(file_name)
-
-        if epoch ==0:
-             with open(file_name, mode="w", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow(["epoch", "dice", "cldice", "acc", "iou", "nsd", "betti_0", "betti_1", "hd"])
-                writer.writerow([epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1,hd])
-        else:
-            with open(file_name, mode="a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow([epoch, dice, cldice, acc, iou, nsd, betti_0, betti_1,hd])
-
-    def save_metrics_to_csv_valid(self, epoch, ema_fg_dice, ema_dice_best, file_name="metrics_valid.csv"):
-        file_exists = os.path.exists(file_name)
-
-        if epoch ==0:
-             with open(file_name, mode="w", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow(["epoch", "ema_fg_dice", "ema_dice_best"])
-                writer.writerow([epoch, ema_fg_dice, ema_dice_best])
-        else:
-            with open(file_name, mode="a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow([epoch, ema_fg_dice, ema_dice_best])
-
-
-        # with open(file_name, mode="w" if not file_exists else "a", newline="") as file:
-        #     writer = csv.writer(file)
-
-            # if not file_exists:
-            #     writer.writerow(["epoch", "dice"])
        
